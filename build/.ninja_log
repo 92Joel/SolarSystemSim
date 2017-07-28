@@ -1,0 +1,24 @@
+# ninja log v5
+269	353	0	../bin/main.exe	576a45abbe761328
+172	210	0	../bin/main	35a1246dbcd451bd
+0	172	0	CMakeFiles/main.dir/src/Test.cpp.o	6305a5b0b2cd9c11
+0	269	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+0	98	0	build.ninja	ced48c7f68428c3e
+0	21	0	CMakeFiles/main.exe.dir/src/CelestialBody.cpp.o	fe4e4a9beb6f58c7
+1	275	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+275	315	0	../bin/main.exe	576a45abbe761328
+1	287	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+287	335	0	../bin/main.exe	576a45abbe761328
+0	267	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+267	315	0	../bin/main.exe	576a45abbe761328
+0	265	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+265	313	0	../bin/main.exe	576a45abbe761328
+1	285	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+286	350	0	../bin/main.exe	576a45abbe761328
+1	284	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+284	327	0	../bin/main.exe	576a45abbe761328
+0	298	0	CMakeFiles/main.exe.dir/src/Test.cpp.o	cf4bcad0bcd39d16
+298	351	0	../bin/main.exe	576a45abbe761328
+1	17	0	help	26b1588d32d273bc
+4	3337	0	build.ninja	ced48c7f68428c3e
+0	3	0	help	26b1588d32d273bc
