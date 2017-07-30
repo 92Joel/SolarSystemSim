@@ -37,6 +37,6 @@ public:
   double getM() { return mass; }                  // Access mass
 };
 
-CelestialBody::~CelestialBody() {}
+inline CelestialBody::~CelestialBody() {} // Must be declared inline to prevent multiple definitions
 
 #endif
