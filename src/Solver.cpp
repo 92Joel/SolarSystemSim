@@ -5,7 +5,9 @@
 #include "Solver.h"
 #include "Initial.h"
 
-void Solver::verlet(CelestialBody &body1, CelestialBody &body2)
+namespace Solver
+{
+void verlet(CelestialBody &body1, CelestialBody &body2)
 {
     std::vector<double> a1(2, 0.0);
     std::vector<double> a2(2, 0.0);
@@ -20,7 +22,6 @@ void Solver::verlet(CelestialBody &body1, CelestialBody &body2)
 
     a1[0] = -fx / body1.getM();
     a2[0] = fx / body2.getM(); // x components of accel.
-
     a1[1] = -fy / body1.getM();
     a2[1] = fy / body2.getM();
 
@@ -52,20 +53,21 @@ void Solver::verlet(CelestialBody &body1, CelestialBody &body2)
                body2.getVy() + 0.5 * (a2[1] + a2p[1]) * dt);
 }
 
-double Solver::distance_sq(CelestialBody &body1, CelestialBody &body2)
+double distance_sq(CelestialBody &body1, CelestialBody &body2)
 {
-  return pow(body1.getX() - body2.getX(), 2) +
-         pow(body1.getY() - body2.getY(), 2);
+    return pow(body1.getX() - body2.getX(), 2) +
+           pow(body1.getY() - body2.getY(), 2);
 } // Returns square of the distance
 
-double Solver::angle(CelestialBody &body1, CelestialBody &body2)
+double angle(CelestialBody &body1, CelestialBody &body2)
 {
-  double deltaY = body2.getY() - body1.getY();
-  double deltaX = body2.getX() - body1.getX();
-  return atan2(deltaY, deltaX);
+    double deltaY = body2.getY() - body1.getY();
+    double deltaX = body2.getX() - body1.getX();
+    return atan2(deltaY, deltaX);
 }
 
-double Solver::force(CelestialBody &body1, CelestialBody &body2)
+double force(CelestialBody &body1, CelestialBody &body2)
 {
-  return G * body1.getM() * body2.getM() / distance_sq(body1, body2);
+    return G * body1.getM() * body2.getM() / distance_sq(body1, body2);
+}
 }

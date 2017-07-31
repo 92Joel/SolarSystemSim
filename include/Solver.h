@@ -5,16 +5,16 @@
 
 #ifndef SOLVER_H
 #define SOLVER_H
-class Solver {
-    public:
+namespace Solver {
+    
     // Verlet solver method
-     static void verlet(CelestialBody &body1, CelestialBody &body2);
-
-     static double angle(CelestialBody &body1, CelestialBody &body2);
-
-     static double force(CelestialBody &body1, CelestialBody &body2);
-
-     static double distance_sq(CelestialBody &body1, CelestialBody &body2);
+     void verlet(CelestialBody &body1, CelestialBody &body2);
+    // Calculate angle between two objects
+     double angle(CelestialBody &body1, CelestialBody &body2);
+    // Calculate grav force on an object
+     double force(CelestialBody &body1, CelestialBody &body2);
+    // Returns squared distance between two objects
+     double distance_sq(CelestialBody &body1, CelestialBody &body2);
 
 };
 

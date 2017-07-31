@@ -9,31 +9,41 @@ class CelestialBody {
   double mass;
   std::vector<double> velocity;
   std::vector<double> position;
+  std::vector<double> acceleration;
 
 public:
-  CelestialBody(double m, std::vector<double> v, std::vector<double> p) {
+  CelestialBody(double m, std::vector<double> v, std::vector<double> p, std::vector<double> a) 
+  {
     mass = m;
     velocity = v;
     position = p;
+    acceleration = a;
   } // Constructor
 
   ~CelestialBody();
-  void setP(double X, double Y) {
+  inline void setP(double X, double Y) {
     position[0] = X;
     position[1] = Y;
   }
-  void setV(double Vx, double Vy) {
+  inline void setV(double Vx, double Vy) {
     velocity[0] = Vx;
     velocity[1] = Vy;
   }
 
+  // Get position and individual components
   double getX() { return position[0]; }
-  double getY() { return position[1]; }           // Access position components
-  std::vector<double> getP() { return position; } // Position vector accessor
+  double getY() { return position[1]; }  
+  std::vector<double> getP() { return position; } 
 
-  double getVx() { return velocity[0]; } // Access velocity components
+  // Get velocity and individual components
+  double getVx() { return velocity[0]; } 
   double getVy() { return velocity[1]; }
-  std::vector<double> getV() { return velocity; } // Velocity vector accessor
+  std::vector<double> getV() { return velocity; } 
+
+  // Get acceleration and individual components
+  double getAx() {return acceleration[0];}
+  double getaY() {return acceleration[1];}
+  std::vector<double> getA() {return acceleration;}
   double getM() { return mass; }                  // Access mass
 };
 
