@@ -1,3 +1,0 @@
-/home/joel/Documents/c++/Projects/SolarSystemSim/build/CMakeFiles/rebuild_cache.dir
-/home/joel/Documents/c++/Projects/SolarSystemSim/build/CMakeFiles/edit_cache.dir
-/home/joel/Documents/c++/Projects/SolarSystemSim/build/CMakeFiles/main.exe.dir
