@@ -1,52 +1,61 @@
 #include <iostream>
 #include <math.h>
 #include <vector>
+#include <string>
+
+#include "VectorNd.h"
 
 #ifndef CELESTIALBODY_H
 #define CELESTIALBODY_H
 
-class CelestialBody {
-  double mass;
-  std::vector<double> velocity;
-  std::vector<double> position;
-  std::vector<double> acceleration;
+/*
+Class to allow the construction of a celestial body.
+*/
 
-public:
-  CelestialBody(double m, std::vector<double> v, std::vector<double> p, std::vector<double> a) 
-  {
-    mass = m;
-    velocity = v;
-    position = p;
-    acceleration = a;
-  } // Constructor
+template <class T>
+class CelestialBody
+{
+  
+  double mass;
+  std::string name;
+  VectorND<T> velocity;
+  VectorND<T> position;
+  VectorND<T> acceleration;
+
+  public:
+  // Constructor
+  constexpr CelestialBody(const double &m, const std::string &n, std::vector<T> &&p,
+                std::vector<T> &&v, std::vector<T> &&a) : mass(m), name(n), velocity(v), position(p), acceleration(a){};
+
+  // Print to console the body's attributes.
+  void Print();
+  // // Compute the current position.
+  // void ComputePosition();
+  // // Compute the acceleration due to the gravitational field
+  // void CalculateAcceleration();
+  // //Calculate the Velocity using the Verlet algorithm
+  // void VelocityVerlet();
+
+  // T distance_sq(&body2);
+
+  // Friend class defined in /src/Solver2.h
+  template <class U> friend class Solver;
 
   ~CelestialBody();
-  inline void setP(double X, double Y) {
-    position[0] = X;
-    position[1] = Y;
-  }
-  inline void setV(double Vx, double Vy) {
-    velocity[0] = Vx;
-    velocity[1] = Vy;
-  }
-
-  // Get position and individual components
-  double getX() { return position[0]; }
-  double getY() { return position[1]; }  
-  std::vector<double> getP() { return position; } 
-
-  // Get velocity and individual components
-  double getVx() { return velocity[0]; } 
-  double getVy() { return velocity[1]; }
-  std::vector<double> getV() { return velocity; } 
-
-  // Get acceleration and individual components
-  double getAx() {return acceleration[0];}
-  double getaY() {return acceleration[1];}
-  std::vector<double> getA() {return acceleration;}
-  double getM() { return mass; }                  // Access mass
 };
 
-inline CelestialBody::~CelestialBody() {} // Must be declared inline to prevent multiple definitions
+template <class T>
+inline CelestialBody<T>::~CelestialBody() {} // Must be declared inline to prevent multiple definitions
+
+template <class T>
+void CelestialBody<T>::Print()
+{
+    std::cout << name << std::endl 
+    << "Mass: " << mass << std::endl
+    << "Velocity: " << velocity
+    << "Position: " << position
+    << "Acceleration: " << acceleration << std::endl;
+}
+
 
 #endif
