@@ -5,7 +5,7 @@
 #include "CelestialBody.h"
 #include "VectorNd.h"
 #include "Initial.h"
-#include "Solver2.h"
+#include "Solver.h"
 
 int main()
 {
@@ -18,7 +18,7 @@ int main()
         // Solver<double>::Compute(sun,earth);
     }
     earth.Print();
-    sun.Print();
+    // sun.Print();
     std::cout << earth_sun;
     return 0;
 }

@@ -3,10 +3,11 @@
 #include <vector>
 #include <string>
 
-#include "VectorNd.h"
-
 #ifndef CELESTIALBODY_H
 #define CELESTIALBODY_H
+
+template <class T>
+class VectorND;
 
 /*
 Class to allow the construction of a celestial body.
@@ -16,7 +17,7 @@ template <class T>
 class CelestialBody
 {
   
-  double mass;
+  T mass;
   std::string name;
   VectorND<T> velocity;
   VectorND<T> position;
@@ -24,7 +25,7 @@ class CelestialBody
 
   public:
   // Constructor
-  constexpr CelestialBody(const double &m, const std::string &n, std::vector<T> &&p,
+  constexpr CelestialBody(const T &m, const std::string &n, std::vector<T> &&p,
                 std::vector<T> &&v, std::vector<T> &&a) : mass(m), name(n), velocity(v), position(p), acceleration(a){};
 
   // Print to console the body's attributes.

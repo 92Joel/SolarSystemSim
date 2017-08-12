@@ -1,1 +1,1 @@
-// Defined in header
+// Template class defined in header
