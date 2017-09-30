@@ -17,7 +17,11 @@
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
         },
         {
             "name": "Linux",
@@ -28,8 +32,10 @@
                 "/usr/lib/clang/4.0.1/include",
                 "/usr/include",
                 "${workspaceRoot}",
-                "${workspaceRoot}/include"
-
+                "${workspaceRoot}/include",
+                "/usr/include/c++/7.2.0",
+                "/usr/include/c++/7.2.0/x86_64-pc-linux-gnu",
+                "/usr/include/linux"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -67,5 +73,5 @@
             }
         }
     ],
-    "version": 2
+    "version": 3
 }

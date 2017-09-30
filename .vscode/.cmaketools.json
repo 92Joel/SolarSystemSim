@@ -7,5 +7,56 @@
     "description": "Enable optimizations, omit debug info"
   },
   "activeEnvironments": [],
-  "codeModel": null
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "Release",
+        "projects": [
+          {
+            "buildDirectory": "/run/media/joel/Data/Documents - Data drive/c++/Projects/SolarSystemSim/build",
+            "name": "SolarSystem",
+            "sourceDirectory": "/run/media/joel/Data/Documents - Data drive/c++/Projects/SolarSystemSim",
+            "targets": [
+              {
+                "artifacts": [
+                  "/run/media/joel/Data/Documents - Data drive/c++/Projects/SolarSystemSim/bin/main.exe"
+                ],
+                "buildDirectory": "/run/media/joel/Data/Documents - Data drive/c++/Projects/SolarSystemSim/build",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-O3 -DNDEBUG   -std=gnu++11",
+                    "includePath": [
+                      {
+                        "path": "/run/media/joel/Data/Documents - Data drive/c++/Projects/SolarSystemSim/include"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/CelestialBody.cpp",
+                      "src/Initial.cpp",
+                      "src/Solver.cpp",
+                      "src/Test (Joel Egglesoton's conflicted copy 2017-09-21).cpp",
+                      "src/Test.cpp",
+                      "src/main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "main.exe",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-O3 -DNDEBUG",
+                "linkerLanguage": "CXX",
+                "name": "main.exe",
+                "sourceDirectory": "/run/media/joel/Data/Documents - Data drive/c++/Projects/SolarSystemSim",
+                "type": "EXECUTABLE"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cookie": "0.23717061799034922",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
 }
